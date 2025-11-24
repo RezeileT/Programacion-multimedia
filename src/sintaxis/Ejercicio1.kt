@@ -1,3 +1,6 @@
+package sintaxis
+
+import java.time.LocalDateTime
 
 fun main(){
     println("Cual es tu nombre")
@@ -5,7 +8,7 @@ fun main(){
     val nombre = readLine() ?: "Visitante"
 
     //Cogemos la librería de java.time la hora
-    val horaActual =  java.time.LocalDateTime.now().hour
+    val horaActual =  LocalDateTime.now().hour
 
     //Creación de una función anónima
     val saludo = when {

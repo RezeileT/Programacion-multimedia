@@ -1,3 +1,5 @@
+package sintaxis
+
 fun main(){
     val numeros = listOf(1,2,3,4,5,6,7,8,9,10)
 
@@ -9,9 +11,9 @@ fun main(){
     val paresDobles = numeros.filter{it % 2 == 0}.map{it * 2 }
     println("Pares duplicados: $paresDobles")
 
-    //Suma de números mayores a 5
+    //Suma de números mayores sintaxis.a 5
     val sumasGrandes = numeros.filter { it > 5 }.sum()
-    println("Suma de números mayores a 5: $sumasGrandes")
+    println("Suma de números mayores sintaxis.a 5: $sumasGrandes")
 
     //Verificar si hay números primos
     fun esPrimo(numero: Int): Boolean{

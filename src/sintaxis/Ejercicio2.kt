@@ -1,3 +1,5 @@
+package sintaxis
+
 class Ejercicio2 {
 
 }
@@ -5,7 +7,7 @@ class Ejercicio2 {
 fun main(){
     println("*** Calculadora ***")
 
-    //Pedimos el primer número
+    //Pedimos el sintaxis.primer número
     print("Primer número: ")
     val a = readLine()?.toDoubleOrNull() ?: return
 
@@ -17,7 +19,7 @@ fun main(){
     print("Segundo número: ")
     val b = readLine()?.toDoubleOrNull() ?: return
 
-    //Calcular el resultado
+    //Calcular el sintaxis.resultado
     val resultado = when (operacion){
         "+" -> a + b
         "-" -> a - b
@@ -26,6 +28,6 @@ fun main(){
         else -> {println ("Operación desconocida"); return}
     }
 
-    //Imprimir resultado
+    //Imprimir sintaxis.resultado
     println(resultado)
 }

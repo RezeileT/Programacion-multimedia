@@ -1,7 +1,9 @@
-//Creación del objeto Usuario
+package sintaxis
+
+//Creación del objeto sintaxis.Usuario
 data class Usuario(val nombre: String, val email: String, val edad: Int)
 
-//Función que valida el nombre del Usuario
+//Función que valida el nombre del sintaxis.Usuario
 fun validarNombre(nombre: String): Result<String> {
     return if(nombre.length < 3){
         Result.failure(Exception("El nombre debe de tener al menos 3 caracteres"))
@@ -51,7 +53,7 @@ fun main(){
         else -> {
             //Inicializamos el usuario tras hacer las verificaciones
             val usuario = Usuario(nombre, email, edad)
-            println("Usuario credado: ${usuario.nombre}")
+            println("sintaxis.Usuario credado: ${usuario.nombre}")
         }
     }
 

@@ -1,3 +1,7 @@
+package sintaxis
+
+import kotlin.collections.iterator
+
 //(Inmutables - no pueden cambiar)
 //Declaraciones de variables con tipo explícito
 val nombre1: String = "Maria"
@@ -9,7 +13,7 @@ val ciudad = "Madrid" //Se deduce que es String
 val contador = 42 //Se deduce que es int
 val contador2 = 42.42 //Se deduce que es double
 
-//Valores constantes a nivel de clase
+//Valores constantes sintaxis.a nivel de clase
 const val PI = 3.14
 
 //(Mutables - pueden cambiar)
@@ -31,10 +35,10 @@ val multilineas = """
 val precentacion = "Me llamo $nombre1 y tengo $edad2 años"
 val a = 5
 val b = 3
-val resultado = "El resultado de $a + $b es ${a + b}"
+val resultado = "El sintaxis.resultado de $a + $b es ${a + b}"
 val lista = listOf(1,2,3,4,5)
-val describcion = "La lista tiene ${lista.size} elementos"
-val primer = "El primer elemento es ${lista.firstOrNull() ?: "vacia" }"
+val describcion = "La sintaxis.lista tiene ${lista.size} elementos"
+val primer = "El sintaxis.primer elemento es ${lista.firstOrNull() ?: "vacia" }"
 
 //(Explicita)Declaración de funciones con parámetro y valor de retorno
 fun suma(a: Int, b: Int = 0): Int {
@@ -100,13 +104,13 @@ fun procesarEstado(estado: String): String = when {
     else -> "Estado valido $estado"
 }
 
-//Equivalente a public static void main en java
+//Equivalente sintaxis.a public static void sintaxis.main en java
 fun main(){
     //Reasignación de valores
     nombre2 = "Maria"
     edad2 = 24
 
-    //Conversión de entero
+    //Conversión de sintaxis.entero
     val decimal: Double = entero.toDouble()
     val texto : String = entero.toString()
     val boolean : Boolean = entero != 0

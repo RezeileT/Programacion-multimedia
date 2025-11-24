@@ -1,3 +1,5 @@
+package sintaxis
+
 class Ejercico3 {
 
 }
@@ -5,7 +7,7 @@ class Ejercico3 {
 data class Tarea(val id: Int, val descriptor: String, var completado: Boolean = false)
 
 fun main(){
-    //Inicailización una lista del objeto Tarea
+    //Inicailización una sintaxis.lista del objeto sintaxis.Tarea
     val tareas = mutableListOf<Tarea>()
     //Variable que nos permite navegar de tarea en tarea
     var siguienteId = 1;
