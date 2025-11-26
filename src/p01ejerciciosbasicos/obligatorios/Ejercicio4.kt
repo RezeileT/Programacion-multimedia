@@ -1,5 +1,8 @@
 package p01ejerciciosbasicos.obligatorios
 
+import java.util.Locale
+import java.util.Locale.getDefault
+
 data class Contactos(var nombre:String, var email:String, var telefono:String, var favorito: Boolean){
     override fun toString(): String {
         return "Nombre: $nombre\n" +
@@ -11,6 +14,10 @@ data class Contactos(var nombre:String, var email:String, var telefono:String, v
 var contactos = mutableListOf<Contactos>()
 
 fun main(){
+    contactos.add(Contactos("Maria","maria@gmail.com","123456789",true))
+    contactos.add(Contactos("Bob","bob@gmail.com","9876584321",false))
+    contactos.add(Contactos("Pedro","pedro@gmail.com","789456123",false))
+
     menuInteractivo()
 }
 
@@ -78,26 +85,35 @@ fun validarTelefono(telefono: String): Result<String>{
 fun crearContacto(){
     println("\n*** Crear contato ***")
     println("Introduce un nombre: ")
-    val nombre = validarNombre(readLine().toString())
+    val nombre = validarNombre(readlnOrNull().toString())
     println("Introduce el emal: ")
-    val email = validarEmail(readLine().toString())
+    val email = validarEmail(readlnOrNull().toString())
     println("Introduce el telefono: ")
-    val telefono = validarTelefono(readLine().toString())
+    val telefono = validarTelefono(readlnOrNull().toString())
 
     contactos.add(Contactos(nombre.toString(), email.toString(), telefono.toString(), false))
 }
 
 fun buscarPorNombre(){
     println("\n*** Buscar por nombre ***")
-    println("Introduce un nombre para filtrar: ")
-    val nombre = validarNombre(readLine().toString())
+    print("Introduce un nombre para filtrar: ")
+    val nombre = readlnOrNull().toString()
+    validarNombre(nombre)
     println("Contactos con el nombre: $nombre")
-    contactos.filter { it.nombre == nombre.toString() }.forEach {
-        println(it)
+    val contactosFiltrados = contactos.filter{ it.nombre.lowercase(getDefault()).contains(nombre.lowercase(getDefault()))}
+    if (contactosFiltrados.isEmpty()) {
+        println("No se han encontrado contactos con ese nombre.")
+    } else {
+        println("-------------")
+        contactosFiltrados.forEach { println(it) }
     }
 }
 
 fun obtenerOrdenados(){
     println("\n*** Obtener ordenados ***")
-
+    contactos.sortedBy { it.nombre }.forEach {
+        println("-------------")
+        println(it)
+    }
 }
+
