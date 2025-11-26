@@ -1,6 +1,6 @@
 package p01ejerciciosbasicos.opcionales
 
-val maxIntentos = 7
+const val maxIntentos = 7
 var record = 0
 
 fun main(){
