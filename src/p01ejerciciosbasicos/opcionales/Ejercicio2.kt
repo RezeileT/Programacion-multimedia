@@ -4,6 +4,7 @@ import java.io.BufferedReader
 import java.io.File
 import java.io.FileReader
 import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 import java.util.Locale
 import java.util.Locale.getDefault
 
@@ -12,7 +13,7 @@ const val TXT = ".txt"
 
 data class Nota(var nombre: String, var fechaCreacion: LocalDateTime, var texto: String, var importante: Boolean){
     override fun toString(): String {
-        return "$nombre: $fechaCreacion"
+        return "$nombre: ${fechaCreacion.format(DateTimeFormatter.ISO_DATE)}"
     }
 }
 
@@ -129,10 +130,20 @@ fun buscarPorNombre() {
 
 fun marcarImportante() {
     println("\n*** Marcar nota como importante ***")
+    mostrarNotas()
+    print("Escribe el nombre de la nota que quieras marcar como importante: ")
+    val nota = readlnOrNull()?.trim().toString().lowercase(getDefault())
+
+    notas.filter { it.nombre.contains(nota) }.forEach {
+        it.importante = true
+    }
+
 }
 
 fun mostrarNotas() {
     println("\n*** Mostrar notas ***")
+    println("*** Notas cargadas encontradas ***")
+    notas.forEach { nota -> println(nota.nombre) }
 }
 
 fun exportarNota() {
