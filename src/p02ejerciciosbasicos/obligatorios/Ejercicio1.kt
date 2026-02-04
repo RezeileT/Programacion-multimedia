@@ -1,7 +1,4 @@
-package p01ejerciciosbasicos.obligatorios
-
-import java.util.Locale
-import java.util.Locale.getDefault
+package p02ejerciciosbasicos.obligatorios
 
 data class Libro(val nombre: String, val autor: String, val fecha: String, val disponibilidad: Boolean)
 

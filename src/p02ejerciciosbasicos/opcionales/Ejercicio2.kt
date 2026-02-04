@@ -1,11 +1,10 @@
-package p01ejerciciosbasicos.opcionales
+package p02ejerciciosbasicos.opcionales
 
 import java.io.BufferedReader
 import java.io.File
 import java.io.FileReader
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
-import java.util.Locale
 import java.util.Locale.getDefault
 
 const val RUTA = "src/p01ejerciciosbasicos/resources/notas"

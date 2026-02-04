@@ -1,4 +1,4 @@
-package p01ejerciciosbasicos.opcionales
+package p02ejerciciosbasicos.opcionales
 
 fun main(){
 

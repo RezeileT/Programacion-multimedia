@@ -1,4 +1,4 @@
-package p01ejerciciosbasicos.obligatorios
+package p02ejerciciosbasicos.obligatorios
 
 data class Kelvin(val numero: Double)
 data class Celsius(val numero: Double)

@@ -1,4 +1,4 @@
-package p01ejerciciosbasicos.obligatorios
+package p02ejerciciosbasicos.obligatorios
 
 import java.util.Locale.getDefault
 

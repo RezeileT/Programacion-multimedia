@@ -1,9 +1,8 @@
-package p01ejerciciosbasicos.obligatorios
+package p02ejerciciosbasicos.obligatorios
 
 import java.io.BufferedReader
 import java.io.File
 import java.io.FileReader
-import java.io.IOException
 
 data class ResultadosTexto(var numeroCaracteres: Int, var numeroPalabras: Int, var numeroLineas: Int, var palabraMasFrecuente: String, var longitudPalabraPromedio: Double){
     override fun toString(): String {

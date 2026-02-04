@@ -1,4 +1,4 @@
-package p01ejerciciosbasicos.opcionales
+package p02ejerciciosbasicos.opcionales
 
 const val maxIntentos = 7
 var record = 0
